@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Valhalla Research and Development</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+<!--link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.css" rel="stylesheet"-->
+<style>
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+padding-bottom: 40px;
+color: #5a5a5a;
+background-color: #c7c7c7;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* begin PMF */
+.navbar-inverse .navbar-inner {
+background-color: #072A70;
+border-color: #072A70;
+background-image: none;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+color: #ffffff;
+background-color: #02256b;
+}
+
+.featurette > ul > li {
+color: #000000;
+}
+/* end PMF */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+z-index: 10;
+margin-top: 20px;
+margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+.navbar-wrapper .navbar {
+
+}
+
+/* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+border: 0;
+-webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+-moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+font-size: 16px;
+font-weight: bold;
+text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+padding: 15px 20px;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+margin-top: 10px;
+}
+
+
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+margin-bottom: 60px;
+}
+
+.carousel .container {
+position: relative;
+z-index: 9;
+}
+
+.carousel-control {
+height: 80px;
+margin-top: 0;
+font-size: 120px;
+text-shadow: 0 1px 1px rgba(0,0,0,.4);
+background-color: transparent;
+border: 0;
+z-index: 10;
+}
+
+.carousel .item {
+height: 500px;
+}
+.carousel img {
+position: absolute;
+top: 0;
+left: 0;
+min-width: 100%;
+height: 500px;
+}
+
+.carousel-caption {
+background-color: transparent;
+position: static;
+max-width: 550px;
+padding: 0 20px;
+/* margin-top: 200px; */
+margin-top: 270px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+margin: 0;
+line-height: 1.25;
+color: #fff;
+text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+margin-top: 10px;
+}
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .span4 {
+text-align: center;
+}
+.marketing h2 {
+font-weight: normal;
+}
+.marketing .span4 p {
+margin-left: 10px;
+margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+margin: 0px 0; /* Space out the Bootstrap <hr> more */
+background-color: transparent;
+border-color: transparent;
+}
+.featurette {
+padding-top: 20px; /* Vertically center images part 1: add padding above and below text. */
+overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+margin-top: 0px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+margin-right: 40px;
+}
+.featurette-image.pull-right {
+margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+font-size: 50px;
+font-weight: 300;
+color: #0200a5;
+line-height: 1;
+letter-spacing: -1px;
+}
+
+/*PMF*/
+.lead {
+font-size: 15px;
+color: black;
+line-height: 21px;
+}
+
+.featurette-heading {
+font-size: 35px;
+padding-bottom: 20px;
+}
+    
+.member-heading {
+font-size: 26px;
+font-weight: normal;
+color: #0200a5;
+line-height: 1;
+letter-spacing: -1px;
+}
+
+.divider {
+margin: 55px 0; /* Space out the Bootstrap <hr> more */
+background-color: #888888;
+border-color: #888888;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+.container.navbar-wrapper {
+margin-bottom: 0;
+width: auto;
+}
+.navbar-inner {
+border-radius: 0;
+margin: -20px 0;
+}
+
+.carousel .item {
+height: 500px;
+}
+.carousel img {
+width: auto;
+height: 500px;
+}
+
+.featurette {
+height: auto;
+padding: 0;
+}
+.featurette-image.pull-left,
+.featurette-image.pull-right {
+display: block;
+float: none;
+max-width: 40%;
+margin: 0 auto 20px;
+}
+}
+
+
+@media (max-width: 767px) {
+
+.navbar-inner {
+margin: -20px;
+}
+
+.carousel {
+margin-left: -20px;
+margin-right: -20px;
+}
+.carousel .container {
+
+}
+.carousel .item {
+height: 300px;
+}
+.carousel img {
+height: 300px;
+}
+.carousel-caption {
+width: 65%;
+padding: 0 70px;
+margin-top: 100px;
+}
+.carousel-caption h1 {
+font-size: 30px;
+}
+.carousel-caption .lead,
+.carousel-caption .btn {
+font-size: 18px;
+}
+
+.marketing .span4 + .span4 {
+margin-top: 40px;
+}
+
+.featurette-heading {
+font-size: 30px;
+}
+.featurette .lead {
+font-size: 18px;
+line-height: 1.5;
+}
+
+}
+</style>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="../assets/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="../assets/ico/favicon.ico">
+</head>
+
+<body>
+
+
+<!-- NAVBAR
+================================================== -->
+<div class="navbar-wrapper">
+    <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    <div class="container">
+
+        <a href="#home" onclick="loadBody('index.html');"><img src="../assets/img/valhallabanner.png" alt="Valhalla Research and Development" height="150" width="412"
+                style="margin-bottom:20px"/></a>
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-inner">
+                <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- a class="brand" href="#">Valhalla R&D</a -->
+                <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+                <div class="nav-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#home" onclick="loadBody('index.html');">Home</a></li>
+                        <li><a href="#projects" onclick="loadBody('projects.html');">Projects</a></li>
+                        <li><a href="#members" onclick="loadBody('members.html');">Members</a></li>
+                        <li><a href="#contact" onclick="loadBody('contact.html');">Contact</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="http://valhallarad.org/valhallawiki/tiki-index.php">Wiki</a></li>
+                        <li><a href="http://www.patreon.com/ValhallaRaD">Patreon</a></li>
+                        <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
+                        <!-- li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li class="nav-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li-->
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!-- /.navbar-inner -->
+        </nav><!-- /.navbar -->
+
+    </div> <!-- /.container -->
+</div><!-- /.navbar-wrapper -->
+
+<div style="height:250px;"></div>
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container" id="body">
+    
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="featurette">
+        <h2 class="featurette-heading">About Valhalla <!--span class="muted">It'll blow your mind.</span--></h2>
+        <p class="lead">Valhalla Research and Development was conceived as a "think tank" style organization with the
+            idea of bringing together intellectuals with diverse backgrounds to address real world problems. Valhalla
+            will address these problems by developing technical solutions that incorporate innovative ways of
+            integrating resources and technology to benefit the average person rather than corporations.
+            <br/><br/>
+            Too often, the field of technology grows in a direction determined by the free market. The "invisible hand"
+            of the economy often governs solutions, which can result in failing to solve the actual problem or only
+            solving the problems that are profitable. Valhalla was envisioned as a response to that mentality. It is a
+            technical solutions group that is not ruled by economic force, but rather humanistic demands.
+            <br/><br/>
+            It could be asserted that if "humanistic demands" were really so prevalent, a for-profit company could turn
+            a profit from meeting that demand. If that were true, the Law of Congestion would have already been applied
+            to traffic management algorithms in a dynamic fashion, and you, the end user of streets and freeways, would
+            be in bumper-to-bumper traffic far less often. The existing technology is good enough, and even though a
+            demand exists to improve traffic technologies, there isn't a financially-driven demand. It's a small
+            "quality of life" demand that we all take for granted. And that is just a minor example.
+            <br/><br/>
+            From recycling to prosthetics, from the mind-brain interface of technology to more efficient systems
+            management, there are volumes of "problems" in the modern world that have novel solutions. Some are high
+            tech, some are unique uses of off-the-shelf products, and still others are startlingly "low tech," but
+            involve a radical paradigm shift in thought. The intention of bringing that sort of Promethean Fire to
+            problem solving, without being slave to the balance sheet, is where Valhalla was born.</p>
+    </div>
+
+    <div class="featurette">
+        <h2 class="featurette-heading">Our Vision <!--span class="muted">See for yourself.</span--></h2>
+        <p class="lead">Our vision is to solve the problems of the world by finding optimal solutions and making them
+            available to advance the general knowledge of the world.
+    </div>
+
+    <div class="featurette">
+        <h2 class="featurette-heading">Principles <!--span class="muted">Checkmate.</span--></h2>
+        <p class="lead">To that end, the company adheres to the following priciples:</p>
+        <ul>
+            <li>Make new technology available to anyone.</li>
+            <li>Promote the novel use of existing technology to solve problems.</li>
+            <li>Create comprehensive solutions that address technology, economy and culture.</li>
+            <li>Utilize the community to further technolgical advancement.</li>
+            <li>Promote responsible free exchange of information.</li>
+            <li>Develop technology driven by need and not profit.</li>
+            <li>Advocate the responsible use of technology.</li>
+        </ul>
+    </div>
+    
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+<div class="container marketing" id="footer">
+    <hr class="divider">
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Valhalla Research and Development &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+</div>
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<!--script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script-->
+<script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+<script src="js/holder/holder.js"></script>
+<script type="text/javascript" >
+    function loadBody(fileName) {
+        $('#body').load(fileName + ' #body'); 
+        return false;
+    }
+</script>
+</body>
+</html>
