@@ -377,6 +377,7 @@ line-height: 1.5;
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
+<div id="body-wrapper">
 <div class="container" id="body">
     
 
@@ -433,6 +434,7 @@ line-height: 1.5;
     <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
+</div><!-- /#body-wrapper -->
 
 <div class="container marketing" id="footer">
     <hr class="divider">
@@ -453,7 +455,7 @@ line-height: 1.5;
 <!--script src="js/holder/holder.js"></script-->
 <script type="text/javascript" >
     function loadBody(fileName) {
-        $('#body').load(fileName + ' #body'); 
+        $('#body-wrapper').load(fileName + ' #body'); 
         return false;
     }
 </script>
