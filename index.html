@@ -99,25 +99,6 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <!--script src="js/holder/holder.js"></script-->
-<script type="text/javascript" >
-    function loadBody(fileName) {
-        $('#body-wrapper').load(fileName + ' #body'); 
-        return false;
-    }
-
-    window.addEventListener("hashchange", function(e) {
-        fileName = location.hash.substring(1) + '.html';
-        loadBody(fileName);
-    });
-
-    window.addEventListener("load", function(e) {
-        if (location.hash == '') {
-            loadBody('home.html');
-        } else {
-            fileName = location.hash.substring(1) + '.html';
-            loadBody(fileName);
-        }
-    });
-</script>
+<script src="js/valhalla.js" type="text/javascript" ></script>
 </body>
 </html>
